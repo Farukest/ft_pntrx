@@ -65,6 +65,9 @@ do
 		
 done
 
+echo 'Disabling services !!'
+systemctl disable pf-service-check.timer && systemctl disable pf-check.timer
+
 echo 'Jobs adding to cron..'
 cd /home/ft/ && ./addcron.sh
 
